@@ -1,5 +1,21 @@
 from typing import List
 
+"""Normally only one stack or queue is needed at a time unless a different kind of system"""
+"""So singleton can be used on the Stack and Queue classes by using metaclass=Singleton under the class declaration"""
+
+"""If array functions such as pop() are not used, one of the ways to remove an item from the stack or queue is array slicing.
+   For example, for stack it would be Stack.stack[:Stack.size() - 1] to take everything but the last item, 
+   and for queue it would be Queue.queue[1:] to take everything but the first item.
+   Meanwhile, to replace len() we can create a class variable named counter to count the number of items in the stack/queue
+   and increment/decrement the number as we enqueue and dequeue."""
+
+class Singleton(type):
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super().__call__(*args, **kwargs)
+        return cls._instances[cls]
+
 class IQueuable:
    """This is a small program, so I will implement an informal interface
    that does not have strict enforcement."""
