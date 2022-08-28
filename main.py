@@ -113,3 +113,15 @@ async def websocket_endpoint(websocket: WebSocket):
         await websocket.send_json(data)
         pass
 
+@app.get("/custView")
+def customer_view():
+    """the function version of the websocket"""
+    global app_queue, counter, latestServingNo, counterServing, counterStatus,app_queue
+    data = {
+            "queue": app_queue.getQueue(),
+            "latestServingNo":  latestServingNo,
+            "lastIssuedNo": numToStr(counter - 1),
+            "counter": counterServing,
+            "counterStatus": counterStatus
+        }
+    return data
