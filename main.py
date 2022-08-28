@@ -4,8 +4,21 @@ from fastapi import FastAPI, WebSocket
 from typing import List
 import __queue
 from fastapi import HTTPException, status, Depends
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "http://localhost",
+    "https://naomikho.github.io/"
+]
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def numToStr(num: int) -> str:
     return format(num, "04") 
