@@ -6,9 +6,10 @@ import __queue
 from fastapi import HTTPException, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
-origins = ["*"]
+origins = ["http://localhost:3000", "https://naomikho.github.io/"]
 
 app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[origins],
