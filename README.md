@@ -2,6 +2,9 @@
 Backend application for queue & ticket system. Built with FastAPI. 
 You may use any part of my code as reference, as long as credit is given.
 
+!!IMPORTANT
+If nothing works on the front end, the back end may require a fresh. Open the developer console and check if there is a message "Failed to load resource: the server responded with a status of 404 ()". If so, please head to https://queue-ticketing-application.herokuapp.com/docs#/ and refresh the page. It should fix the issue.
+
 Note: This project is still a work in progress. Due to deployment issues WebSocket function is not supported unless both ends of the application run on localhost.
 
 How do I access the application?
