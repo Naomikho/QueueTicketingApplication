@@ -8,10 +8,13 @@ You may use any part of my code as reference, as long as credit is given.
 
 Note: Due to deployment issues WebSocket function is not supported unless both ends of the application run on localhost.
 
-How do I access the application?
+Q1. How do I access the application?
 This repository only contains the backend. Due to time constraints, I did not build a front end from scratched and built new pages as extensions
 of my existing website. You can access the application using these two links and open them in two different tabs or devices. Right now you have to force a refresh on the Customer Ticket page to see updates as there is no WebSocket support. 
 
 https://naomikho.github.io/CustTicket
 
 https://naomikho.github.io/CounterView
+
+Q2. Where is the front end code for this application? 
+The code for the front end can be found on my other repo https://github.com/Naomikho/Naomikho.github.io in the master branch. Go into src > pages and you will find CustTicket.js and CounterView.js. Since they are built as part of my website, the routing is handled by App.js and all the css is under App.css. 
