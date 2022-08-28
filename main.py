@@ -71,6 +71,8 @@ def gen_ticket():
 @app.post("/callNext")
 def call_next(counterNo: int):
     global latestServingNo, counterServing, counterStatus
+    if (len(app_queue.getQueue()) == 0):
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="there is no one in the queue to call")
     if (not counterStatus[counterNo - 1]):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="cannot call next when counter is offline")
     elif (counterServing[counterNo - 1] != ""):
@@ -84,6 +86,8 @@ def call_next(counterNo: int):
 @app.post("/compCurr")
 def complete_current(counterNo: int):
     global counterServing, counterStatus
+    if (counterServing[counterNo - 1] == ""):
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="counter is current not serving anyone!")
     if (not counterStatus[counterNo - 1]):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="invalid function call when counter is offline")
     counterServing[counterNo - 1] = ""
