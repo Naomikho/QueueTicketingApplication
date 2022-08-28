@@ -34,7 +34,7 @@ counterStatus: List[bool]
 async def startup_event():
     """Ensure start with empty queue"""
     global app_queue, counter, latestServingNo, counterServing, counterStatus
-    latestServingNo = ""
+    latestServingNo = "Queue has not started"
     app_queue = __queue.Queue()
     counter = 0
     counterServing = ["","","",""]
@@ -50,7 +50,7 @@ def ping():
 def clear_queue():
     """This is just a basic clear operation, so I'll use get"""
     global app_queue, counter, latestServingNo, counterServing, counterStatus
-    latestServingNo = ""
+    latestServingNo = "Queue has not started"
     app_queue = __queue.Queue()
     counter = 0
     counterServing = ["","","",""]
