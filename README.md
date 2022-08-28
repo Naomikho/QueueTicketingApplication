@@ -10,7 +10,7 @@ Note: Due to deployment issues WebSocket function is not supported unless both e
 
 Q1. How do I access the application?
 
-This repository only contains the backend. Due to time constraints, I did not build a front end from scratched and built new pages as extensions
+This repository only contains the backend. Due to time constraints, I did not build a front end from scratch and built new pages as extensions
 of my existing website. You can access the application using these two links and open them in two different tabs or devices. Right now you have to force a refresh on the Customer Ticket page to see updates as there is no WebSocket support. 
 
 https://naomikho.github.io/CustTicket
