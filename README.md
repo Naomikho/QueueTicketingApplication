@@ -10,7 +10,8 @@ Note: Due to deployment issues the WebSocket function is not supported. Free hos
 
 !!IMPORTANT
 1. If nothing works on the front end, the back end may require a fresh as Heroku's hostings go to sleep without interaction. I am using Kaffeine to keep it awake now, but I'll keep this note just in case. Open the developer console and check if there is a message "Failed to load resource: the server responded with a status of 404 ()". If so, please head to https://queue-ticketing-application.herokuapp.com/docs#/ and refresh the page. It should fix the issue. 
-2. Free hosting options have timeouts, so the data sent to the front end may be in its default/initial state once in a while. Please understand that this is not intended behaviour. You may refresh the page again if the data has suddenly reverted to its default state(although you have not used the clear function).
+2. Heroku has timeouts and runs very slow, so the data sent to the front end may be in its default/initial state. Please understand that this is not intended behaviour, and a refresh will normally fix it. Please also refrain from sending requests too frequently & quickly to the API because it processes requests very slowly. Wait for at least a couple of seconds before you execute the next function. 
+3. Referring to the above point, you may see data of /custView in its default state even on the Swagger UI, and executing GET another time should fix it. However the POST functions should work better here. 
 
 Q1. How do I access the application?
 
