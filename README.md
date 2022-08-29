@@ -4,6 +4,8 @@ You may use any part of my code as reference, as long as credit is given.
 
 Here is the Swagger UI for the API : https://queue-ticketing-application.herokuapp.com/docs
 
+Main functions: On the customer ticket view, you can take a new ticket and view counter & queue status. On the counter view, you can use call next to call the first person in the queue over, and use comp curr to complete the current ticket that you are processing. You can also make the counters go offline and clear the queue and reset the counters to their default state.  
+
 Note: Due to deployment issues the WebSocket function is not supported. Free hosting options do not support Websocket and there is a CORS issue on localhost(where a CORS proxy solution doesn't work). 
 
 !!IMPORTANT
