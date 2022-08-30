@@ -6,7 +6,7 @@ Here is the Swagger UI for the API : https://queue-ticketing-application.herokua
 
 Main functions: On the customer ticket view, you can take a new ticket and view counter & queue status. On the counter view, you can use call next to call the first person in the queue over, and use comp curr to complete the current ticket that you are processing. You can also make the counters go offline and clear the queue and reset the counters to their default state.  
 
-Note: Due to deployment issues the WebSocket function is not supported. Free hosting options do not support Websocket and there is a CORS issue on localhost(where a CORS proxy solution doesn't work). 
+Note: Due to deployment issues the WebSocket function is not supported. Free hosting options do not support Websocket while there are a CORS issues on localhost(where a CORS proxy solution doesn't work). 
 
 !!IMPORTANT
 1. If nothing works on the front end, the back end may require a fresh as Heroku's hostings go to sleep without interaction. I am using Kaffeine to keep it awake now, but I'll keep this note just in case. Open the developer console and check if there is a message "Failed to load resource: the server responded with a status of 404 ()". If so, please head to https://queue-ticketing-application.herokuapp.com/docs#/ and refresh the page. It should fix the issue. 
